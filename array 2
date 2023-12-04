@@ -1,0 +1,36 @@
+function containsOddNumber(array) {
+    return array.some(function(element) {
+      return element % 2 !== 0;
+    });
+  }
+  
+  function containsZero(number) {
+    return number.toString().split('').some(function(digit) {
+      return digit === '0';
+    });
+  }
+  
+  function containsOnlyOddNumbers(array) {
+    return array.every(function(element) {
+      return element % 2 !== 0;
+    });
+  }
+  
+  function hasNoDuplicates(array) {
+    return array.every(function(element, index, arr) {
+      return arr.indexOf(element) === arr.lastIndexOf(element);
+    });
+  }
+  
+  function hasKey(arrayOfObjects, targetKey) {
+    return arrayOfObjects.every(function(obj) {
+      return targetKey in obj;
+    });
+  }
+  
+  function hasValue(arrayOfObjects, targetKey, targetValue) {
+    return arrayOfObjects.every(function(obj) {
+      return obj[targetKey] === targetValue;
+    });
+  }
+  
